@@ -4,5 +4,5 @@ class Sighting < ActiveRecord::Base
   validates :lat, presence: true
   validates :long, presence: true
   validates :animal, presence: true
-  validates :region, presence: true
+  # validates :region, presence: true
 end

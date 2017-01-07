@@ -17,3 +17,28 @@
 
 <%= link_to 'Edit', edit_animal_path(@animal) %> |
 <%= link_to 'Back', animals_path %>
+
+<hr/>
+<ul id="sighting_list">
+  <% @animal.sightings.each do |sighting| %>
+    <li><%= sighting.date %></li>
+  <% end %>
+</ul>
+<hr/>
+
+<p>
+  <!-- Input area for new sighting -->
+  <div class="field">
+  </div>
+  <div class="field">
+    <label for="sightings_date">Date</label>
+    <input type="date" id="sightings_date" name="sightings[date]">
+    <label for="sightings_lat">Lat</label>
+    <input type="number" id="sightings_lat" name="sightings[lat]">
+    <label for="sightings_long">Long</label>
+    <input type="number" id="sightings_long" name="sightings[long]">
+    <input type="hidden" name="animal[id]" id="animal_id" value="<%=@animal.id %>"/>
+    <button id="add_new_sighting_button">Add New Sighting</button>
+  </div>
+
+</p>

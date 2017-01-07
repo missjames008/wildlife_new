@@ -27,5 +27,18 @@
 </table>
 
 <br>
+<h3>Create New Animal</h3>
+<p>
+  <!-- Input area for new animal -->
+  <div class="field">
+    <label for="animal_name">Name</label>
+    <input type="text" name="animal[name]" id="animal_name" />
+    <label for="animal_latin_name">Latin Name</label>
+    <input type="text" name="animal[latin_name]" id="animal_latin_name" />
+    <label for="animal_kingdom">Kingdom</label>
+    <input type="text" name="animal[kingdom]" id="animal_kingdom" />
+  </div>
+</div>
+<button id="add_new_animal_button">Add New Animal</button>
 
-<%= link_to 'New Animal', new_animal_path %>
+</p>
